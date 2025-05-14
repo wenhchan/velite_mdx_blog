@@ -1,0 +1,233 @@
+---
+title: "Einstein's Field Equations"
+description: "Derive Einstein's Field Equations"
+image: Pulsar_schematic.svg.png
+publishedAt: 2025-05-05 13:00:00
+updatedAt: 2025-05-05 13:00:00
+author: "xGrok"
+isPublished: true
+tags:
+- gravitation
+- Einstein's Field Equations
+slug: derivation_of_einstein_s_field_equations
+---
+
+# Derivation of Einstein's Field Equations
+
+Einstein's field equations relate the geometry of spacetime to the distribution of matter and energy. They are derived from the principle of general covariance and the Einstein-Hilbert action. Below is a step-by-step derivation.
+
+## 1. The Einstein-Hilbert Action
+
+The action for general relativity is the **Einstein-Hilbert action**, which describes the dynamics of the gravitational field:
+
+$$
+S = \frac{1}{16\pi G} \int R \sqrt{-g} \, d^4x + S_m
+$$
+
+where:
+- $R$ is the Ricci scalar (scalar curvature),
+- $g = \det(g_{\mu\nu})$ is the determinant of the metric tensor,
+- $G$ is Newton's gravitational constant,
+- $S_m$ is the matter action,
+- $d^4x$ is the spacetime volume element.
+
+The factor $\sqrt{-g}$ ensures the volume element is a scalar under coordinate transformations.
+
+## 2. Varying the Action
+
+To derive the field equations, we vary the action $S$ with respect to the metric $g^{\mu\nu}$ and set the variation to zero:
+
+$$
+\delta S = \delta S_g + \delta S_m = 0
+$$
+
+### Variation of the Gravitational Term
+
+The gravitational part of the action is:
+
+$$
+S_g = \frac{1}{16\pi G} \int R \sqrt{-g} \, d^4x
+$$
+
+Varying this term:
+
+$$
+\delta S_g = \frac{1}{16\pi G} \int \left( \delta R \sqrt{-g} + R \delta \sqrt{-g} \right) d^4x
+$$
+
+#### Variation of the Ricci Scalar
+
+The Ricci scalar is $R = g^{\mu\nu} R_{\mu\nu}$, where $R_{\mu\nu}$ is the Ricci tensor. The variation of $R$ is:
+
+$$
+\delta R = \delta (g^{\mu\nu} R_{\mu\nu}) = R_{\mu\nu} \delta g^{\mu\nu} + g^{\mu\nu} \delta R_{\mu\nu}
+$$
+
+The term $\delta R_{\mu\nu}$ involves the variation of the Riemann tensor, which leads to a total divergence (via the Palatini identity). This term contributes a boundary term that vanishes under suitable boundary conditions. Thus:
+
+$$
+\delta R = R_{\mu\nu} \delta g^{\mu\nu}
+$$
+
+#### Variation of the Determinant
+
+The variation of $\sqrt{-g}$ is:
+
+$$
+\delta \sqrt{-g} = -\frac{1}{2} \sqrt{-g} g_{\mu\nu} \delta g^{\mu\nu}
+$$
+
+Combining these, the variation of the gravitational term becomes:
+
+$$
+\delta S_g = \frac{1}{16\pi G} \int \left( R_{\mu\nu} \delta g^{\mu\nu} \sqrt{-g} + R \left( -\frac{1}{2} \sqrt{-g} g_{\mu\nu} \delta g^{\mu\nu} \right) \right) d^4x
+$$
+
+Simplify:
+
+$$
+\delta S_g = \frac{1}{16\pi G} \int \left( R_{\mu\nu} - \frac{1}{2} R g_{\mu\nu} \right) \sqrt{-g} \delta g^{\mu\nu} \, d^4x
+$$
+
+### Variation of the Matter Term
+
+The matter action $S_m$ depends on the metric and matter fields. The variation defines the **stress-energy tensor**:
+
+$$
+\delta S_m = -\frac{1}{2} \int T_{\mu\nu} \sqrt{-g} \delta g^{\mu\nu} \, d^4x
+$$
+
+where $T_{\mu\nu}$ is the stress-energy tensor.
+
+## 3. The Field Equations
+
+Combining the variations:
+
+$$
+\delta S = \frac{1}{16\pi G} \int \left( R_{\mu\nu} - \frac{1}{2} R g_{\mu\nu} \right) \sqrt{-g} \delta g^{\mu\nu} \, d^4x - \frac{1}{2} \int T_{\mu\nu} \sqrt{-g} \delta g^{\mu\nu} \, d^4x = 0
+$$
+
+For this to hold for arbitrary $\delta g^{\mu\nu}$, the integrand must vanish:
+
+$$
+\frac{1}{16\pi G} \left( R_{\mu\nu} - \frac{1}{2} R g_{\mu\nu} \right) = \frac{1}{2} T_{\mu\nu}
+$$
+
+Multiply through by $16\pi G$:
+
+$$
+R_{\mu\nu} - \frac{1}{2} R g_{\mu\nu} = 8\pi G T_{\mu\nu}
+$$
+
+This is the **Einstein field equation** in natural units. Define the **Einstein tensor**:
+
+$$
+G_{\mu\nu} = R_{\mu\nu} - \frac{1}{2} R g_{\mu\nu}
+$$
+
+Thus, the field equations are compactly written as:
+
+$$
+G_{\mu\nu} = 8\pi G T_{\mu\nu}
+$$
+
+## 4. Including the Cosmological Constant
+
+To include the cosmological constant $\Lambda$, add a term $-\Lambda \sqrt{-g}$ to the action. This modifies the field equations to:
+
+$$
+R_{\mu\nu} - \frac{1}{2} R g_{\mu\nu} + \Lambda g_{\mu\nu} = 8\pi G T_{\mu\nu}
+$$
+
+or:
+
+$$
+G_{\mu\nu} + \Lambda g_{\mu\nu} = 8\pi G T_{\mu\nu}
+$$
+
+## Conclusion
+
+The Einstein field equations describe how the geometry of spacetime, encoded in the Einstein tensor $G_{\mu\nu}$, is determined by the distribution of matter and energy, represented by $T_{\mu\nu}$. The derivation from the Einstein-Hilbert action ensures the equations are covariant and consistent with the principle of general relativity.
+
+# The Schwarzschild Solution
+
+The Schwarzschild solution is an exact solution to Einstein's field equations in vacuum, describing the gravitational field outside a spherically symmetric, non-rotating, uncharged mass. It is a cornerstone of general relativity, applicable to scenarios like the spacetime around a star or a black hole.
+
+## 1. Setup: Vacuum Field Equations
+
+For the region outside a mass (vacuum), the stress-energy tensor is zero: $T_{\mu\nu} = 0$. Einstein's field equations (without cosmological constant) are:
+
+$$
+R_{\mu\nu} - \frac{1}{2} R g_{\mu\nu} = 0
+$$
+
+Contracting indices, the trace gives $R = 0$, so the equation simplifies to:
+
+$$
+R_{\mu\nu} = 0
+$$
+
+The Schwarzschild solution is derived by solving the vacuum field equations for a static, spherically symmetric spacetime.
+
+## 2. Metric Ansatz
+
+Assume a static, spherically symmetric spacetime. The metric can be written in spherical coordinates $(t, r, \theta, \phi)$ as:
+
+$$
+ds^2 = -A(r) dt^2 + B(r) dr^2 + r^2 (d\theta^2 + \sin^2\theta \, d\phi^2)
+$$
+
+where $A(r)$ and $B(r)$ are functions of the radial coordinate $r$, and the $r^2 (d\theta^2 + \sin^2\theta \, d\phi^2)$ term reflects spherical symmetry. The metric is static (no time dependence) and diagonal.
+
+## 3. Solving the Field Equations
+
+Compute the Christoffel symbols, Ricci tensor, and Ricci scalar for the metric. The non-zero components of the Ricci tensor $R_{\mu\nu}$ are complex, but for the vacuum equations $R_{\mu\nu} = 0$, we solve the resulting differential equations for $A(r)$ and $B(r)$.
+
+Key steps:
+- Compute the Einstein tensor $G_{\mu\nu}$ or Ricci tensor $R_{\mu\nu}$.
+- Set $R_{\mu\nu} = 0$, yielding differential equations for $A(r)$ and $B(r)$.
+- Solve the equations, typically finding $A(r) B(r) = 1$ and a differential equation for $A(r)$.
+
+The solution yields:
+
+$$
+A(r) = 1 - \frac{2GM}{r}, \quad B(r) = \left(1 - \frac{2GM}{r}\right)^{-1}
+$$
+
+where $M$ is the mass of the central object, and $G$ is Newton's gravitational constant (in natural units, $c=1$).
+
+## 4. The Schwarzschild Metric
+
+Substituting $A(r)$ and $B(r)$, the Schwarzschild metric is:
+
+$$
+ds^2 = -\left(1 - \frac{2GM}{r}\right) dt^2 + \left(1 - \frac{2GM}{r}\right)^{-1} dr^2 + r^2 (d\theta^2 + \sin^2\theta \, d\phi^2)
+$$
+
+In terms of the Schwarzschild radius $r_s = 2GM$, the metric is:
+
+$$
+ds^2 = -\left(1 - \frac{r_s}{r}\right) dt^2 + \left(1 - \frac{r_s}{r}\right)^{-1} dr^2 + r^2 (d\theta^2 + \sin^2\theta \, d\phi^2)
+$$
+
+## 5. Key Features
+
+- **Event Horizon**: At $r = r_s = 2GM$, the metric component $g_{rr}$ diverges, and $g_{tt} = 0$. This is the event horizon of a black hole, a coordinate singularity (removable with different coordinates, e.g., Kruskal-Szekeres).
+- **Singularity**: At $r = 0$, the curvature (e.g., Kretschmann scalar) diverges, indicating a true physical singularity.
+- **Asymptotic Flatness**: As $r \to \infty$, the metric approaches the Minkowski metric, consistent with flat spacetime far from the mass.
+- **Schwarzschild Radius**: For a mass $M$, $r_s = 2GM$ defines the radius of the event horizon (in units where $c=1$).
+
+## 6. Physical Implications
+
+- **Black Holes**: For a mass compressed within $r_s$, the solution describes a black hole with an event horizon.
+- **Gravitational Redshift**: Time dilation occurs near the mass, with clocks ticking slower as $r$ decreases.
+- **Orbits**: The metric predicts stable and unstable orbits, precession of perihelia (e.g., Mercury), and photon paths (gravitational lensing).
+- **Weak-Field Limit**: For large $r$, the metric approximates Newtonian gravity, with $g_{tt} \approx -(1 - 2GM/r)$.
+
+## 7. Coordinate Singularities and Extensions
+
+The coordinate singularity at $r = r_s$ is an artifact of the Schwarzschild coordinates. Alternative coordinate systems (e.g., Eddington-Finkelstein, Kruskal-Szekeres) remove this singularity, revealing the full structure of the spacetime, including the black hole interior.
+
+## Conclusion
+
+The Schwarzschild solution is a fundamental result in general relativity, describing the spacetime geometry around a non-rotating, spherically symmetric mass. It provides the foundation for understanding black holes, gravitational effects, and tests of general relativity.

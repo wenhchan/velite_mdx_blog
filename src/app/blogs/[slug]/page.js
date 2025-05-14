@@ -6,6 +6,7 @@ import { blogs } from '@/.velite/generated'
 import { slug as slugify } from "github-slugger";
 import Image from "next/image";
 import { notFound } from "next/navigation";
+import 'katex/dist/katex.min.css'
 
 export async function generateStaticParams() {
   return blogs.map((blog) => ({ slug: blog.slug }));
@@ -131,7 +132,7 @@ export default async function BlogPage({ params }) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
        <article>
-      <div className="mb-8 text-center relative w-full h-[70vh] bg-dark">
+      {/* <div className="mb-8 text-center relative w-full h-[70vh] bg-dark">
         <div className="w-full z-10 flex flex-col items-center justify-center absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
           <Tag
             name={blog.tags[0]}
@@ -156,8 +157,8 @@ export default async function BlogPage({ params }) {
           priority
           sizes="100vw"
         />
-      </div>
-      <BlogDetails blog={blog} slug={params.slug} />
+      </div> */}
+      <BlogDetails blog={blog} slug={slug} />
 
       <div className="grid grid-cols-12  gap-y-8 lg:gap-8 sxl:gap-16 mt-8 px-5 md:px-10">
         <div className="col-span-12  lg:col-span-4">

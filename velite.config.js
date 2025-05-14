@@ -5,6 +5,8 @@ import rehypeAutolinkHeadings from "rehype-autolink-headings"
 import rehypePrettyCode from "rehype-pretty-code"
 import rehypeSlug from "rehype-slug"
 import remarkGfm from "remark-gfm"
+import remarkMath from 'remark-math'
+import rehypeKatex from 'rehype-katex'
 
 const codeOptions = {
   theme: 'github-dark',
@@ -55,8 +57,9 @@ export default defineConfig({
   },
   // Add MDX plugins
   mdx: {
-    remarkPlugins: [remarkGfm],
+    remarkPlugins: [remarkGfm, remarkMath],
     rehypePlugins: [
+      rehypeKatex,
       rehypeSlug,
       [rehypeAutolinkHeadings, { behavior: "append" }],
       [rehypePrettyCode, codeOptions]

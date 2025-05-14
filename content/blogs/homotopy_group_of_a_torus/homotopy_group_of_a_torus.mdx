@@ -1,0 +1,110 @@
+---
+title: "Homotopy group of a torus"
+description: "Derivation of homotopy group of a torus"
+image: Tesseract_torus.png
+publishedAt: 2025-05-06 13:00:00
+updatedAt: 2025-05-06 13:00:00
+author: "ChatGpt"
+isPublished: true
+tags:
+- Gauge theory
+slug: homotopy_group_of_a_torus
+---
+
+
+## Homotopy Groups of the Torus $ T^2 $
+
+We compute the homotopy groups $\pi_n(T^2)$ for all $n \geq 0$.
+
+---
+
+## Step 1: Describe the space
+
+The torus is the product of two circles:
+$$
+T^2 = S^1 \times S^1
+$$
+
+---
+
+## Step 2: Compute $\pi_0(T^2)$ (path components)
+
+$\pi_0$ counts the connected components of the space.
+
+- The torus is connected.
+- Therefore:
+$$
+\pi_0(T^2) = 0
+$$
+which is often written as the trivial group:
+$$
+\pi_0(T^2) \cong \{e\}
+$$
+
+---
+
+## Step 3: Compute $\pi_1(T^2)$ (fundamental group)
+
+We use the product formula for the fundamental group:
+$$
+\pi_1(X \times Y) \cong \pi_1(X) \times \pi_1(Y)
+$$
+
+We know:
+$$
+\pi_1(S^1) \cong \mathbb{Z}
+$$
+
+Therefore:
+$$
+\pi_1(T^2) \cong \pi_1(S^1) \times \pi_1(S^1) \cong \mathbb{Z} \times \mathbb{Z}
+$$
+
+Interpretation:
+- The torus has two basic loops:
+    - One around the "hole" (meridional loop)
+    - One around the "tube" (longitudinal loop)
+- These loops generate the fundamental group freely.
+
+---
+
+## Step 4: Compute higher homotopy groups $\pi_n(T^2)$, $n \geq 2$
+
+We again use the product formula:
+$$
+\pi_n(X \times Y) \cong \pi_n(X) \times \pi_n(Y)
+$$
+
+For $S^1$, we have:
+$$
+\pi_n(S^1) = 0 \quad \text{for } n \geq 2
+$$
+
+Therefore:
+$$
+\pi_n(T^2) \cong \pi_n(S^1) \times \pi_n(S^1) = 0 \quad \text{for } n \geq 2
+$$
+
+---
+
+## ✅ Final Summary
+
+$$
+\pi_0(T^2) = 0, \quad \pi_1(T^2) \cong \mathbb{Z} \times \mathbb{Z}, \quad \pi_n(T^2) = 0 \text{ for } n \geq 2
+$$
+
+In plain text:
+- $\pi_0(T^2) = 0$
+- $\pi_1(T^2) \cong \mathbb{Z} \times \mathbb{Z}$
+- $\pi_n(T^2) = 0$ for $n \geq 2$
+
+---
+
+## Summary of reasoning
+
+- The torus is connected → trivial $\pi_0$
+- The torus is a product of two circles → fundamental group $\mathbb{Z} \times \mathbb{Z}$
+- The circle has trivial higher homotopy → torus has trivial higher homotopy
+
+---
+

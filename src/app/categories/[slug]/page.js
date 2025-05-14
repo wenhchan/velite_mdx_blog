@@ -32,7 +32,7 @@ export async function generateMetadata({ params }) {
 }
 
 
-const CategoryPage = ({ params }) => {
+const CategoryPage = async ({ params }) => {
 // Separating logic to create list of categories from all blogs
 const allCategories = ["all"]; // Initialize with 'all' category
 allBlogs.forEach(blog => {

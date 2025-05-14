@@ -1,0 +1,115 @@
+---
+title: "Yang-Mills Equations"
+description: "Yang-Mills Equations Overview"
+image: neutron-star-magnetic-field.jpg
+publishedAt: 2025-05-05 13:00:00
+updatedAt: 2025-05-05 13:00:00
+author: "xGrok"
+isPublished: true
+tags:
+- Yang-Mills Equations
+- Gauge theory
+- Fiber bundles
+slug: yang-mills_equations
+---
+
+# Yang-Mills Equations Overview
+
+The **Yang-Mills equations** are a set of nonlinear partial differential equations that generalize Maxwell's equations to non-abelian gauge groups. They play a central role in modern differential geometry, mathematical physics, and the theory of gauge fields.
+
+## Mathematical Setup
+
+Let $P \to M$ be a principal $G$-bundle over a smooth manifold $M$, where $G$ is a compact Lie group (e.g., $SU(N)$). A **connection** on $P$ is described locally by a $\mathfrak{g}$-valued $1$-form $A$, called the **gauge field**.
+
+The curvature (or **field strength**) of $A$ is the $2$-form:
+
+$$
+F_A = dA + A \wedge A,
+$$
+
+where $d$ is the exterior derivative and $\wedge$ is the wedge product.
+
+## Yang-Mills Functional
+
+The Yang-Mills action (or functional) is defined as:
+
+$$
+S_{YM}[A] = \int_M \langle F_A, F_A \rangle \, d\mathrm{vol},
+$$
+
+where $\langle \cdot, \cdot \rangle$ is an invariant inner product on the Lie algebra $\mathfrak{g}$, and $d\mathrm{vol}$ is the volume form on $M$.
+
+## Euler-Lagrange Equations
+
+The critical points of $S_{YM}$ satisfy the **Yang-Mills equations**:
+
+$$
+d_A^* F_A = 0,
+$$
+
+where $d_A^*$ is the adjoint of the covariant derivative $d_A = d + [A, \cdot]$. In local coordinates, this becomes:
+
+$$
+\nabla^\mu F_{\mu \nu} = 0,
+$$
+
+where $\nabla^\mu$ is the covariant derivative and $F_{\mu \nu}$ are the components of the curvature tensor.
+
+## The other form
+
+The Yang-Mills equations can be written as:
+
+$$
+D^\mu F_{\mu \nu} = J_\nu
+$$
+
+where:
+
+- $F_{\mu \nu}$ is the field strength tensor:
+  $$
+  F_{\mu \nu} = \partial_\mu A_\nu - \partial_\nu A_\mu + ig [A_\mu, A_\nu]
+  $$
+
+- $D_\mu$ is the covariant derivative:
+  $$
+  D_\mu = \partial_\mu + ig A_\mu
+  $$
+
+- $J_\nu$ is the matter current (if present).
+
+In the absence of sources ($J_\nu = 0$), the equation simplifies to:
+
+$$
+D^\mu F_{\mu \nu} = 0
+$$
+
+The Yang-Mills Lagrangian is given by:
+
+$$
+\mathcal{L}_{YM} = -\frac{1}{4} F_{\mu \nu}^a F^{a \mu \nu}
+$$
+
+where the index $a$ runs over the generators of the gauge group.
+
+
+## Gauge Symmetry
+
+The equations are invariant under **gauge transformations**:
+
+$$
+A \mapsto g^{-1} A g + g^{-1} d g, \quad g: M \to G.
+$$
+
+This gauge symmetry is a defining feature of Yang-Mills theory.
+
+## Special Cases
+
+- For $G = U(1)$, the Yang-Mills equations reduce to the Maxwell equations of electromagnetism.
+- For $G = SU(2)$ or $SU(3)$, they describe the non-abelian gauge fields in the Standard Model of particle physics.
+
+## Applications
+
+- Differential geometry: study of instantons and monopoles.
+- Topology: Donaldson theory, Seiberg-Witten invariants.
+- Mathematical physics: quantum gauge theories, confinement, and mass gaps.
+
